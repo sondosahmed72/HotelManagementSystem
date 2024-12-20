@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hotelmanagementsystem.receptionist.ResidentsViewController" spacing="10" alignment="CENTER">
+
+    <TableView fx:id="tableView" prefWidth="800" prefHeight="600">
+        <!-- تعريف الأعمدة -->
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" />
+            <TableColumn text="Name" fx:id="nameColumn" />
+            <TableColumn text="Room ID" fx:id="roomIDColumn" />
+            <TableColumn text="Check-In Date" fx:id="checkInDateColumn" />
+            <TableColumn text="Check-Out Date" fx:id="checkOutDateColumn" />
+            <TableColumn text="Boarding Option" fx:id="boardingOptionColumn" />
+            <TableColumn text="Total Cost" fx:id="totalCostColumn" />
+        </columns>
+    </TableView>
+</VBox>

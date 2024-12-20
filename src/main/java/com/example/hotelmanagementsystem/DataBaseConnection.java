@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 
 public class DataBaseConnection {
     // Use the relative path to the db folder
-    private static final String URL = "jdbc:sqlite:C:/Users/sondo/IdeaProjects/HotelManagementSystem/db/data.db";
+    private static final String URL = "jdbc:sqlite:data.db";
 
 
     public static void connectAndUpdate() {
