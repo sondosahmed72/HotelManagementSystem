@@ -1,7 +1,7 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
 import com.example.hotelmanagementsystem.receptionist.Models.Resident;
-import com.example.hotelmanagementsystem.receptionist.Room;
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.Pos;

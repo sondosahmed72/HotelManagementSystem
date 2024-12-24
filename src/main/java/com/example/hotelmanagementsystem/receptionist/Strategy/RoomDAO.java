@@ -1,6 +1,7 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
 
 import java.sql.*;
 import java.util.ArrayList;
