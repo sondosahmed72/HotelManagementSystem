@@ -3,27 +3,30 @@ package com.example.hotelmanagementsystem;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class DataBaseConnection {
+
     // Use the relative path to the db folder
-    private static final String URL = "jdbc:sqlite:C:/Users/sondo/IdeaProjects/HotelManagementSystem/db/data.db";
+    private static final String URL = "jdbc:sqlite:E:/HotelManagementSystem/db/data.db";
 
+    private static Connection connection;
 
-    public static void connectAndUpdate() {
-        try (Connection conn = DriverManager.getConnection(URL)) {
-            String sql = "INSERT INTO Residents (name, roomID, checkInDate, checkOutDate, boardingOption, totalCost) VALUES (?, ?, ?, ?, ?, ?)";
-            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.setString(1, "John Doe");
-                pstmt.setInt(2, 101); // Example roomID
-                pstmt.setString(3, "2024-12-20");
-                pstmt.setString(4, "2024-12-25");
-                pstmt.setString(5, "Full Board");
-                pstmt.setDouble(6, 500.0);
+    // Method to get the URL of the database
+    public static String getDatabaseUrl() {
+        return URL;
+    }
 
-                pstmt.executeUpdate(); // This will update the database file
+    // Method to get a connection to the database
+    public static Connection getConnection() {
+        if (connection == null) {
+            try {
+                connection = DriverManager.getConnection(URL);
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
+        return connection;
     }
 }
+
