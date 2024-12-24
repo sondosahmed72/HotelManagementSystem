@@ -1,11 +1,12 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.controller;
 
+import com.example.hotelmanagementsystem.receptionist.Models.Resident;
+import com.example.hotelmanagementsystem.receptionist.Room;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.Pos;
-import javafx.scene.paint.Color;
+
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 public class ResidentDialog extends Dialog<Resident> {

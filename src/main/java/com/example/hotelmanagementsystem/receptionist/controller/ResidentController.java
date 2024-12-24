@@ -1,6 +1,9 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.controller;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
+import com.example.hotelmanagementsystem.receptionist.Models.Resident;
+import com.example.hotelmanagementsystem.receptionist.Room;
+import com.example.hotelmanagementsystem.receptionist.RoomDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.sql.*;
