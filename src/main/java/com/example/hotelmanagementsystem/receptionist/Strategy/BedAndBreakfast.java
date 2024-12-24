@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
 
 // Bed and Breakfast Option
 public class BedAndBreakfast implements BoardingOption {

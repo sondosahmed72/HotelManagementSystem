@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
 
 // Full Board Option
 public class FullBoard implements BoardingOption {
