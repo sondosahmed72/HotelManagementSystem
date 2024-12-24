@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
 
 // Interface for Boarding Option
 public interface BoardingOption {

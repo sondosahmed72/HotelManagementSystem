@@ -50,6 +50,8 @@
 
                             <!-- Add Boarding Option Column -->
                             <TableColumn fx:id="boardingOptionColumn" prefWidth="150" style="-fx-alignment: CENTER;" text="Boarding Option" />
+                            <TableColumn fx:id="totalCostColumn" prefWidth="150" style="-fx-alignment: CENTER;" text="Total Cost" />
+
                         </columns>
                     </TableView>
 

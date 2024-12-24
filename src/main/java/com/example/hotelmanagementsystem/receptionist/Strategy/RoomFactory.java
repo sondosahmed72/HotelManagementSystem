@@ -1,4 +1,6 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
+
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
 
 // Factory for Room Creation
 public class RoomFactory {
