@@ -1,0 +1,108 @@
+/* عام */
+* {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Sidebar Styling */
+.sidebar-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-alignment: center-left;
+    -fx-pref-width: 120px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+}
+
+/* Sidebar Background with Border and Rounded Corners */
+.left {
+    -fx-background-color: #043B5C;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2;
+    -fx-border-radius: 15px 15px 0 0;  /* أعلى وأسفل الجانبين منحني */
+    -fx-padding: 10px;
+}
+
+/* Main Buttons (Add, Edit, Delete) */
+.button-style {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-color: #043B5C;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button-style:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+}
+
+/* خلفية الـ BorderPane */
+.root {
+    -fx-background-color: #F4F6F9;
+}
+
+/* تنسيق العنوان */
+StackPane > Label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+/* تنسيق الـ TableView */
+#residentTableView {
+    -fx-border-color: #2196F3;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 4);
+    -fx-font-size: 13px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-text-fill: #333333;
+}
+
+#residentTableView .column-header {
+    -fx-background-color:#FAF9F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* تنسيق الأعمدة في الـ TableView */
+#residentTableView .table-cell {
+    -fx-padding: 8px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 14px;
+}
+
+#residentTableView .table-row-cell:filled:hover {
+    -fx-background-color: #E3F2FD;
+}
+
+/* تنسيق الـ HBox */
+HBox {
+    -fx-padding: 10px;
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* تنسيق الـ Tooltip */
+.tooltip {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+}
