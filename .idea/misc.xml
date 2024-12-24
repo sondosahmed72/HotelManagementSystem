@@ -8,7 +8,14 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="C:\Users\lenovo ideapad\Downloads\openjfx-17.0.13_windows-x64_bin-sdk\javafx-sdk-17.0.13\lib " location="$PROJECT_DIR$" />
+    <resource url="http://javafx.com/fxml" location="$PROJECT_DIR$" />
+    <resource url="http://javafx.com/fxml " location="$PROJECT_DIR$" />
+    <resource url="http://javafx.com/javafx " location="$PROJECT_DIR$" />
+    <resource url="http://javafx.com/javafx/1.0/fxml " location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+    <output url="file://$PROJECT_DIR$" />
   </component>
 </project>

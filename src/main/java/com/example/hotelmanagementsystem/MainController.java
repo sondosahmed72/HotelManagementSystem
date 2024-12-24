@@ -29,4 +29,20 @@ public class MainController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void handleWorkerClick() {
+        try {
+            // تحميل صفحة الـ Workers
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/WorkerManagement.fxml"));
+
+
+            BorderPane workersPage = loader.load();
+
+            // تحديث محتوى الجزء المركزي
+            mainContent.getChildren().setAll(workersPage);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

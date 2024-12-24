@@ -9,10 +9,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="575.0" prefWidth="883.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.MainController">
+<BorderPane prefHeight="575.0" prefWidth="883.0" fx:controller="com.example.hotelmanagementsystem.MainController"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+      >
     <!-- Stylesheet -->
     <stylesheets>
-        <URL value="@styles.css" />
+        <URL value="@styles.css"/>
     </stylesheets>
 
     <!-- Sidebar Section (ثابت) -->
@@ -20,7 +23,7 @@
         <VBox style="-fx-background-color: #043B5C; -fx-min-width: 100px; -fx-max-width: 200px; -fx-pref-width: 160px; -fx-border-radius: 10px;">
             <!-- Sidebar Header -->
             <StackPane style="-fx-padding: 20px; -fx-background-color: #043B5C;">
-                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Menu" />
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Menu"/>
             </StackPane>
 
             <!-- Sidebar Menu -->
@@ -29,21 +32,29 @@
                 <Button onAction="#handleResidentClick" styleClass="sidebar-button" text="Resident">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/agent.png" />
+                            <Image url="@icons/agent.png"/>
                         </ImageView>
                     </graphic>
                 </Button>
                 <Button styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/bed.png" />
+                            <Image url="@icons/bed.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <!-- Button for Workers -->
+                <Button onAction="#handleWorkerClick" styleClass="sidebar-button" text="Workers">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <Image url="@icons/workers.png"/> <!-- ضع صورة مناسبة هنا -->
                         </ImageView>
                     </graphic>
                 </Button>
                 <Button styleClass="sidebar-button" text="Logout">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/logout.png" />
+                            <Image url="@icons/logout.png"/>
                         </ImageView>
                     </graphic>
                 </Button>

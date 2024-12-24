@@ -89,7 +89,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.hotelmanagementsystem/com.example.hotelmanagementsystem.HelloApplication
+                                com.example.hotelmanagementsystem/com.example.hotelmanagementsystem.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
