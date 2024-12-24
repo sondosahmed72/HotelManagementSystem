@@ -1,51 +1,76 @@
 package com.example.hotelmanagementsystem.receptionist;
-
-import javafx.beans.property.*;
-
 public class Resident {
-    private final IntegerProperty residentID;
-    private final StringProperty name;
-    private final IntegerProperty roomID;
-    private final StringProperty checkInDate;
-    private final StringProperty checkOutDate;
-    private final StringProperty boardingOption;
-    private final DoubleProperty totalCost;
-
-    public Resident(int residentID, String name, int roomID, String checkInDate, String checkOutDate, String boardingOption, double totalCost) {
-        this.residentID = new SimpleIntegerProperty(residentID);
-        this.name = new SimpleStringProperty(name);
-        this.roomID = new SimpleIntegerProperty(roomID);
-        this.checkInDate = new SimpleStringProperty(checkInDate);
-        this.checkOutDate = new SimpleStringProperty(checkOutDate);
-        this.boardingOption = new SimpleStringProperty(boardingOption);
-        this.totalCost = new SimpleDoubleProperty(totalCost);
+    private int id;
+    private String name;
+    private String roomID;
+    private String checkInDate;
+    private String checkOutDate;
+    private boolean hasSauna;
+    private boolean hasSpaHammam;
+    private boolean hasMassage;
+    private boolean hasPrivateView;
+    private double totalCost;
+    public Resident(int id, String name, String roomID, String checkInDate, String checkOutDate, boolean hasSauna, boolean hasSpaHammam, boolean hasMassage, boolean hasPrivateView) {
+        this.id = id;
+        this.name = name;
+        this.roomID = roomID;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+        this.hasSauna = hasSauna;
+        this.hasSpaHammam = hasSpaHammam;
+        this.hasMassage = hasMassage;
+        this.hasPrivateView = hasPrivateView;
+        updateService();
     }
 
-    public IntegerProperty residentIDProperty() {
-        return residentID;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public StringProperty nameProperty() {
+    public void updateService() {
+        Service service = new BasicService();
+        if (hasSauna) {
+            service = new SaunaDecorator(service);
+        }
+        if (hasSpaHammam) {
+            service = new SpaHammamDecorator(service);
+        }
+        if (hasMassage) {
+            service = new MassageDecorator(service);
+        }
+        if (hasPrivateView) {
+            service = new PrivateViewDecorator(service);
+        }
+        totalCost = service.getCost();
+    }
+    public double getTotalCost() {
+        return totalCost;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
         return name;
     }
-
-    public IntegerProperty roomIDProperty() {
+    public String getRoomID() {
         return roomID;
     }
-
-    public StringProperty checkInDateProperty() {
+    public String getCheckInDate() {
         return checkInDate;
     }
-
-    public StringProperty checkOutDateProperty() {
+    public String getCheckOutDate() {
         return checkOutDate;
     }
-
-    public StringProperty boardingOptionProperty() {
-        return boardingOption;
+    public boolean isHasSauna() {
+        return hasSauna;
     }
-
-    public DoubleProperty totalCostProperty() {
-        return totalCost;
+    public boolean isHasSpaHammam() {
+        return hasSpaHammam;
+    }
+    public boolean isHasMassage() {
+        return hasMassage;
+    }
+    public boolean isHasPrivateView() {
+        return hasPrivateView;
     }
 }
