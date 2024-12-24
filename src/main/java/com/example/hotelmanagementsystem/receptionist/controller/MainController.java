@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem;
+package com.example.hotelmanagementsystem.receptionist.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.BorderPane;

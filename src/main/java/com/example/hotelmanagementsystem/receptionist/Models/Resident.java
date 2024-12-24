@@ -1,4 +1,7 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Models;
+
+import com.example.hotelmanagementsystem.receptionist.Decorator.*;
+
 public class Resident {
     private int id;
     private String name;

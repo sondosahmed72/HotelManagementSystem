@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Decorator;
 
 public abstract class ServiceDecorator extends Service {
     protected Service decoratedService;

@@ -11,4 +11,10 @@ module com.example.hotelmanagementsystem {
     opens com.example.hotelmanagementsystem to javafx.fxml;
     exports com.example.hotelmanagementsystem.receptionist; // Ensure that the package is exported
     exports com.example.hotelmanagementsystem;
+    exports com.example.hotelmanagementsystem.receptionist.Decorator;
+    opens com.example.hotelmanagementsystem.receptionist.Decorator to javafx.fxml;
+    exports com.example.hotelmanagementsystem.receptionist.controller;
+    opens com.example.hotelmanagementsystem.receptionist.controller to javafx.fxml;
+    exports com.example.hotelmanagementsystem.receptionist.Models;
+    opens com.example.hotelmanagementsystem.receptionist.Models to javafx.fxml;
 }
