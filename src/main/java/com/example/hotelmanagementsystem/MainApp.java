@@ -13,7 +13,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Load the FXML file for the Resident Management screen
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/sidebar.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Manager/SideBarforManager.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/sidebar.fxml"));
         InputStream stream = getClass().getResourceAsStream("/com/example/hotelmanagementsystem/Style/ManagerSideBar.css");
         if (stream == null) {
             System.out.println("Resource not found");

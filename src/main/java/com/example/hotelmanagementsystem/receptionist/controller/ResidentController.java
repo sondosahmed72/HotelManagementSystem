@@ -44,7 +44,7 @@ public class ResidentController {
         hasMassageColumn.setCellValueFactory(new PropertyValueFactory<>("hasMassage"));
         hasPrivateViewColumn.setCellValueFactory(new PropertyValueFactory<>("hasPrivateView"));
         boardingOptionColumn.setCellValueFactory(new PropertyValueFactory<>("boardingOption"));
-        totalCostColumn.setCellValueFactory(new PropertyValueFactory<>("totalCost")); // ربط العمود
+//        totalCostColumn.setCellValueFactory(new PropertyValueFactory<>("totalCost")); // ربط العمود
 
         residentTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         loadResidents();
