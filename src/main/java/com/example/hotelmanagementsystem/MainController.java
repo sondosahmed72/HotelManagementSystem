@@ -33,7 +33,7 @@ public class MainController {
     private void handleRoomClick() {
         try {
             // Load the Room page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Room.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/Room.fxml"));
             BorderPane roomPage = loader.load();
 
             // Set the content to the main content area
