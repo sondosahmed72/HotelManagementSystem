@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DataBaseConnection {
 
     // Use the relative path to the db folder
-    private static final String URL = "jdbc:sqlite:E:/Pattern/sondos/New folder/HotelManagementSystem/db/data.db";
+    private static final String URL = "jdbc:sqlite:C:/Users/lenovo ideapad/IdeaProjects/HotelManagementSystem/db/data.db";
 
     private static Connection connection;
 
@@ -18,8 +18,8 @@ public class DataBaseConnection {
     }
 
     // Method to get a connection to the database
-    public static Connection getConnection() {
-        if (connection == null) {
+    public static Connection getConnection() throws SQLException {
+        if (connection == null || connection.isClosed()) {
             try {
                 connection = DriverManager.getConnection(URL);
             } catch (SQLException e) {
