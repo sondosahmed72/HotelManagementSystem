@@ -1,10 +1,11 @@
-package com.example.hotelmanagementsystem.manager.controllers;
+package com.example.hotelmanagementsystem.manager.Controllers;
 
 import com.example.hotelmanagementsystem.manager.Classes.Workers.Worker;
 import com.example.hotelmanagementsystem.manager.Classes.Workers.WorkerPrototypeRegistry;
 import com.example.hotelmanagementsystem.manager.Classes.Workers.workerMember;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -200,4 +201,6 @@ public class WorkerFormController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+
 }

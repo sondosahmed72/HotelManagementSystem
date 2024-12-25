@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.manager.controllers;
+package com.example.hotelmanagementsystem.manager.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
