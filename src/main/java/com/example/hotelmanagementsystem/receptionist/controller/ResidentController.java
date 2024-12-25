@@ -2,6 +2,7 @@ package com.example.hotelmanagementsystem.receptionist.controller;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
 import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
+import com.example.hotelmanagementsystem.receptionist.Facade.CheckoutCostFacade;
 import com.example.hotelmanagementsystem.receptionist.Models.Resident;
 import com.example.hotelmanagementsystem.receptionist.Strategy.RoomDAO;
 import javafx.fxml.FXML;
@@ -255,5 +256,32 @@ public class ResidentController {
         alert.setTitle(title);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    @FXML
+    private void handleCost() {
+        // الحصول على المقيم المحدد من الجدول
+        Resident selectedResident = residentTableView.getSelectionModel().getSelectedItem();
+
+        // إذا لم يتم تحديد أي مقيم
+        if (selectedResident == null) {
+            showAlert(Alert.AlertType.WARNING, "No Selection", "Please select a resident to calculate the cost.");
+            return;
+        }
+
+        // إنشاء كائن من كلاس CheckoutCostFacade
+        CheckoutCostFacade checkoutCostFacade = new CheckoutCostFacade();
+
+        checkoutCostFacade.processAndDisplayResidentDetails(selectedResident.getId());
+
+    }
+    private String showOptionDialog() {
+
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Select Option");
+        dialog.setHeaderText("Choose Option");
+        dialog.setContentText("Enter 'single' to calculate for a single resident or 'all' to calculate for all residents:");
+
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse("");
     }
 }
