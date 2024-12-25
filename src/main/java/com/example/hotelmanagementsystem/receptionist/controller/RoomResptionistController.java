@@ -1,6 +1,6 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
-import com.example.hotelmanagementsystem.receptionist.Models.Room;
+import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,23 +12,23 @@ import java.sql.*;
 public class RoomResptionistController {
 
     @FXML
-    private TableView<Room> roomTableView;
+    private TableView<Rooms> roomTableView;
 
     @FXML
-    private TableColumn<Room, Integer> roomIDColumn;
+    private TableColumn<Rooms, Integer> roomIDColumn;
 
     @FXML
-    private TableColumn<Room, String> typeColumn;
+    private TableColumn<Rooms, String> typeColumn;
 
     @FXML
-    private TableColumn<Room, Double> priceColumn;
+    private TableColumn<Rooms, Double> priceColumn;
 
     @FXML
-    private TableColumn<Room, String> statusColumn;
+    private TableColumn<Rooms, String> statusColumn;
 
-    private ObservableList<Room> roomList = FXCollections.observableArrayList();
+    private ObservableList<Rooms> roomList = FXCollections.observableArrayList();
 
-    private static final String dbUrl = "jdbc:sqlite:db/data.db";
+    private static final String dbUrl = "jdbc:sqlite:E:/cyber/HotelManagementSystem/db/data.db";
 
     @FXML
     public void initialize() {
@@ -51,12 +51,17 @@ public class RoomResptionistController {
              ResultSet resultSet = statement.executeQuery("SELECT * FROM Rooms")) {
 
             while (resultSet.next()) {
-                Room room = new Room(
+                Rooms room = new Rooms(
                         resultSet.getInt("roomID"),
                         resultSet.getString("type"),
                         resultSet.getDouble("price"),
                         resultSet.getString("status")
-                );
+                ) {
+                    @Override
+                    public int getRoomID() {
+                        return super.getRoomID();
+                    }
+                };
                 roomList.add(room);
             }
 

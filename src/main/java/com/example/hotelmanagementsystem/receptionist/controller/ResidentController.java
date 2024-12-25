@@ -1,8 +1,8 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
+import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 import com.example.hotelmanagementsystem.receptionist.Models.Resident;
-import com.example.hotelmanagementsystem.receptionist.Models.Room;
 import com.example.hotelmanagementsystem.receptionist.Strategy.RoomDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -77,9 +77,9 @@ public class ResidentController {
     }
 
 
-    private ObservableList<Room> roomList = FXCollections.observableArrayList();
+    private ObservableList<Rooms> roomList = FXCollections.observableArrayList();
 
-    public ObservableList<Room> getRoomList() {
+    public ObservableList<Rooms> getRoomList() {
         return roomList;
     }
 
@@ -96,12 +96,13 @@ public class ResidentController {
                 //BoardingOption boardingOption = BoardingOption.valueOf(resultSet.getString("boardingOption").toUpperCase());
 
                 // Create a Room object
-                Room room = new Room(
+                Rooms room = new Rooms(
                         resultSet.getInt("roomID"),          // Room ID
                         resultSet.getString("type"),         // Room Type
                         resultSet.getDouble("price"),        // Price
                         resultSet.getString("status")         // Converted BoardingOption
-                );
+                ) {
+                };
                 roomList.add(room); // Add each room to the list
             }
         } catch (SQLException e) {
