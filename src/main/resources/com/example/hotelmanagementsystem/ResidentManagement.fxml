@@ -64,6 +64,7 @@
                     <Button fx:id="addButton" onAction="#handleAdd" styleClass="button-style" text="Add" />
                     <Button fx:id="editButton" onAction="#handleEdit" styleClass="button-style" text="Edit" />
                     <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="button-style" text="Delete" />
+                    <Button fx:id="costButton" onAction="#handleCost" styleClass="button-style" text="Cost" />
                 </HBox>
             </bottom>
         </BorderPane>

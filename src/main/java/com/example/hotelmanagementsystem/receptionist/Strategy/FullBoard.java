@@ -4,7 +4,7 @@ package com.example.hotelmanagementsystem.receptionist.Strategy;
 public class FullBoard implements BoardingOptionStrategy {
     @Override
     public String getName() {
-        return "Full Board";
+        return "Full board";
     }
 
     @Override

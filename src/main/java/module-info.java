@@ -19,4 +19,6 @@ module com.example.hotelmanagementsystem {
     opens com.example.hotelmanagementsystem.receptionist.Models to javafx.fxml;
     exports com.example.hotelmanagementsystem.receptionist.Strategy;
     opens com.example.hotelmanagementsystem.receptionist.Strategy to javafx.fxml;
+    exports com.example.hotelmanagementsystem.receptionist.Facade;
+    opens com.example.hotelmanagementsystem.receptionist.Facade to javafx.fxml;
 }

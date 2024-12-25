@@ -4,9 +4,9 @@ package com.example.hotelmanagementsystem.receptionist.Strategy;
 public class BoardingOptionSelector {
     public static BoardingOptionStrategy selectStrategy(String boardingOption) {
         switch (boardingOption) {
-            case "Full Board":
+            case "Full board":
                 return new FullBoard();
-            case "Half Board":
+            case "Half board":
                 return new HalfBoard();
             case "Bed and Breakfast":
                 return new BedAndBreakfast();
