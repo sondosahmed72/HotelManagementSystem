@@ -1,0 +1,177 @@
+/* General */
+* {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 15px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.table-container {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+
+/* Main Buttons (Add, Edit, Delete) */
+.button-style {
+ -fx-background-color: #043B5C;
+     -fx-text-fill: white;
+     -fx-font-size: 14px;
+     -fx-padding: 8px 20px;
+     -fx-background-radius: 30px;
+
+}
+
+.button-style:hover {
+  -fx-background-color: #031f30;
+      -fx-cursor: hand;
+}
+
+/* Title Styling */
+StackPane > Label {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+    -fx-alignment: center;
+}
+
+/* TableView Styling */
+#residentTableView {
+    -fx-border-color: #B3E5FC;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 3);
+    -fx-font-size: 14px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-text-fill: #444444;
+}
+
+#residentTableView .column-header {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #212121;
+    -fx-font-weight: bold;
+}
+
+#residentTableView .table-cell {
+    -fx-padding: 10px;
+
+    -fx-font-size: 14px;
+}
+
+#residentTableView .table-row-cell:filled:hover {
+    -fx-background-color: #F1F8E9;
+}
+
+/* HBox Styling */
+HBox {
+    -fx-padding: 12px;
+    -fx-background-color: #FAFAFA;
+    -fx-border-color: #EEEEEE;
+    -fx-border-width: 1;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+/* Tooltip Styling */
+.tooltip {
+    -fx-background-color: #81D4FA;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 6px;
+}
+
+/* Dialog Label Styling */
+.dialog-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* TextField and DatePicker Styling */
+.dialog-text-field, .dialog-date-picker {
+    -fx-padding: 10px;
+    -fx-background-color: #FAFAFA;
+    -fx-border-radius: 6px;
+    -fx-border-color: #DDDDDD;
+    -fx-pref-width: 260px;
+}
+
+/* Dialog Button Styling */
+.dialog-button {
+    -fx-background-color: #66BB6A;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10px;
+    -fx-border-radius: 6px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 1);
+}
+
+.dialog-button:hover {
+    -fx-background-color: #57A05B;
+}
+
+/* CheckBox Styling */
+.dialog-checkbox {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* ListView Styling */
+.list-view .list-cell {
+    -fx-background-color: #F9F9F9;
+    -fx-padding: 12px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #EEEEEE;
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #EEEEEE;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #66BB6A;
+    -fx-text-fill: white;
+}
+
+/* Room Selection Dialog */
+.room-selection-dialog {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 16px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #CCCCCC;
+    -fx-pref-width: 460px;
+}
+
+/* Room Selection Button */
+.room-selection-button {
+    -fx-background-color: #66BB6A;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 12px;
+    -fx-border-radius: 6px;
+}
+
+.room-selection-button:hover {
+    -fx-background-color: #57A05B;
+}
+
+/* Room Selection ListView */
+.room-selection-list-view {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 320px;
+    -fx-background-color: #FAFAFA;
+    -fx-border-radius: 6px;
+    -fx-border-color: #DDDDDD;
+}
+
+/* Room Selection ListView Cell */
+.room-selection-list-view .list-cell {
+    -fx-padding: 14px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-border-radius: 6px;
+}

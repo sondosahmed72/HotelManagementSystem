@@ -3,9 +3,8 @@ package com.example.hotelmanagementsystem.receptionist;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.Pos;
-import javafx.scene.paint.Color;
+
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 public class ResidentDialog extends Dialog<Resident> {
@@ -37,7 +36,7 @@ public class ResidentDialog extends Dialog<Resident> {
     // Initialize Dialog Components
     private void initDialog() {
         // Add CSS stylesheet
-        getDialogPane().getStylesheets().add(getClass().getResource("/com/example/hotelmanagementsystem/styles.css").toExternalForm());
+        getDialogPane().getStylesheets().add(getClass().getResource("/com/example/hotelmanagementsystem/Style/styles.css").toExternalForm());
 
         nameField = new TextField();
         selectedRoomLabel = new Label("No Room Selected");

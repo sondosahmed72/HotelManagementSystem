@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.manager;
+package com.example.hotelmanagementsystem.manager.Classes;
 
 public class manager {
     private static manager instance;
