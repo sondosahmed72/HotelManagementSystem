@@ -1,7 +1,7 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
-import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 import com.example.hotelmanagementsystem.receptionist.Models.Resident;
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.Pos;
@@ -38,7 +38,7 @@ public class ResidentDialog extends Dialog<Resident> {
     // Initialize Dialog Components
     private void initDialog() {
         // Add CSS stylesheet
-        getDialogPane().getStylesheets().add(getClass().getResource("/com/example/hotelmanagementsystem/Style/styles.css").toExternalForm());
+        getDialogPane().getStylesheets().add(getClass().getResource("/com/example/hotelmanagementsystem/styles.css").toExternalForm());
 
         nameField = new TextField();
         selectedRoomLabel = new Label("No Room Selected");
@@ -161,23 +161,23 @@ public class ResidentDialog extends Dialog<Resident> {
         ResidentController controller = new ResidentController();
         controller.loadAvailableRooms(); // تحميل البيانات
 
-        Dialog<Rooms> roomDialog = new Dialog<>();
+        Dialog<Room> roomDialog = new Dialog<>();
         roomDialog.setTitle("Available Rooms");
 
-        ListView<Rooms> roomListView = new ListView<>();
+        ListView<Room> roomListView = new ListView<>();
         roomListView.setItems(controller.getRoomList()); // عرض الغرف المتاحة في الليست
 
         // تخصيص طريقة عرض العناصر في ListView
-        roomListView.setCellFactory(param -> new ListCell<Rooms>() {
+        roomListView.setCellFactory(param -> new ListCell<Room>() {
             @Override
-            protected void updateItem(Rooms item, boolean empty) {
+            protected void updateItem(Room item, boolean empty) {
                 super.updateItem(item, empty);
                 if (empty || item == null) {
                     setText(null);
                     setStyle("");
                 } else {
                     // عرض معلومات الغرفة بشكل مرتب
-                    setText("Room ID: " + item.getRoomID() + " (" + item.getType()  + ")");
+                    setText("Room ID: " + item.getId() + " (" + item.getType()  + ")");
                     setStyle("-fx-background-color: #f0f0f0; -fx-padding: 5px;"); // إضافة لون خلفية وتباعد للخلايا
                 }
             }
@@ -196,15 +196,13 @@ public class ResidentDialog extends Dialog<Resident> {
             return null;
         });
 
-        Optional<Rooms> result = roomDialog.showAndWait();
+        Optional<Room> result = roomDialog.showAndWait();
         result.ifPresent(selectedRoom -> {
-            selectedRoomID = String.valueOf(selectedRoom.getRoomID());
+            selectedRoomID = String.valueOf(selectedRoom.getId());
             selectedRoomLabel.setText("Room: " + selectedRoomID + " (" + selectedRoom.getType() +  ")");
         });
     }
 
-
-    
     // Method to show error messages
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);

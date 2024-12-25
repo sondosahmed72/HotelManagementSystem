@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.receptionist.controller.RoomResptionistController">
+    <!-- Header -->
+    <top>
+        <Label text="Rooms" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-alignment: center;">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Label>
+    </top>
+
+    <!-- Table -->
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <TableView fx:id="roomTableView" prefHeight="400" prefWidth="900">
+                <columns>
+                    <TableColumn fx:id="roomIDColumn" text="Room ID" prefWidth="150"/>
+                    <TableColumn fx:id="typeColumn" text="Type" prefWidth="200"/>
+                    <TableColumn fx:id="priceColumn" text="Price" prefWidth="150"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+
+
+</BorderPane>

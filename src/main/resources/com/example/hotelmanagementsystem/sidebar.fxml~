@@ -33,18 +33,10 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button styleClass="sidebar-button" text="Rooms">
+                <Button  onAction="#handleResidentClick"  styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                             <Image url="@icons/bed.png" />
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <!-- Button for Workers -->
-                <Button onAction="#handleWorkersClick" styleClass="sidebar-button" text="Workers">
-                    <graphic>
-                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/worker.png"/>
                         </ImageView>
                     </graphic>
                 </Button>

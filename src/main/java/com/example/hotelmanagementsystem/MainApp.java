@@ -15,7 +15,7 @@ public class MainApp extends Application {
 
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Hotel Management System - Resident Management");
+        primaryStage.setTitle("Hotel Management System - Manager Management");
         primaryStage.show();
 
     }
