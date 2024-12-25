@@ -47,7 +47,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button styleClass="sidebar-button" text="Residents ">
+                <Button fx:id="residentsButton" onAction="#handleResidentsClick" styleClass="sidebar-button" text="Residents ">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                             <Image url="@../../icons/family.png" />

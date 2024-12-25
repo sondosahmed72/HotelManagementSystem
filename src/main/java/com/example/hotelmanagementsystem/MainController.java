@@ -46,4 +46,19 @@ public class MainController {
             e.printStackTrace(); // Handle exception (log or show an alert)
         }
     }
+    @FXML
+    public void handleResidentsClick(javafx.event.ActionEvent actionEvent) {
+        try {
+            // Load the RoomsManager.fxml file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Manager/ResidentsManager.fxml"));
+
+            Node roomsContent = loader.load();
+
+            // Clear the mainContent and set the new content
+            mainContent.getChildren().clear();
+            mainContent.getChildren().add(roomsContent);
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle exception (log or show an alert)
+        }
+    }
 }
