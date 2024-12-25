@@ -58,7 +58,7 @@
                     <columns>
                         <TableColumn fx:id="colName" text="Name" />
                         <TableColumn fx:id="colContact" text="Contact Information" />
-                        <TableColumn fx:id="colRole" text="Role" />
+                        <TableColumn fx:id="roleColumn" text="Role" />
                         <TableColumn fx:id="salaryColumn" text="Salary" />
                         <TableColumn fx:id="jobTitleColumn" text="Job Title" />
                     </columns>
