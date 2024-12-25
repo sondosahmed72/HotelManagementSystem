@@ -14,7 +14,7 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.receptionist.controller.ResidentController">
     <!-- Stylesheet -->
     <stylesheets>
-        <URL value="@styles.css" />
+        <URL value="@../../Style/styles.css" />
     </stylesheets>
 
     <!-- Sidebar Section -->
@@ -64,6 +64,7 @@
                     <Button fx:id="addButton" onAction="#handleAdd" styleClass="button-style" text="Add" />
                     <Button fx:id="editButton" onAction="#handleEdit" styleClass="button-style" text="Edit" />
                     <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="button-style" text="Delete" />
+                    <Button fx:id="costButton" onAction="#handleCost" styleClass="button-style" text="Cost" />
                 </HBox>
             </bottom>
         </BorderPane>

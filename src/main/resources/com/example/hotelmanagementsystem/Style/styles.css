@@ -1,0 +1,201 @@
+/* عام */
+* {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Sidebar Styling */
+.sidebar-button {
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-alignment: center-left;
+    -fx-pref-width: 120px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+}
+
+/* Sidebar Background with Border and Rounded Corners */
+.left {
+    -fx-background-color: #043B5C;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2;
+    -fx-border-radius: 15px 15px 0 0;  /* أعلى وأسفل الجانبين منحني */
+    -fx-padding: 10px;
+}
+
+/* Main Buttons (Add, Edit, Delete) */
+.button-style {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-color: #043B5C;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button-style:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+}
+
+/* خلفية الـ BorderPane */
+.root {
+    -fx-background-color: #F4F6F9;
+}
+
+/* تنسيق العنوان */
+StackPane > Label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+/* تنسيق الـ TableView */
+#residentTableView, #roomTableView {
+    -fx-border-color: #2196F3;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 4);
+    -fx-font-size: 13px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-text-fill: #333333;
+}
+
+#residentTableView .column-header , #roomTableView .column-header {
+    -fx-background-color:#FAF9F6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* تنسيق الأعمدة في الـ TableView */
+#residentTableView .table-cell , #roomTableView .table-cell {
+    -fx-padding: 8px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 14px;
+}
+
+#residentTableView .table-row-cell:filled:hover, #roomTableView .table-row-cell:filled:hover {
+    -fx-background-color: #E3F2FD;
+}
+
+/* تنسيق الـ HBox */
+HBox {
+    -fx-padding: 10px;
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* تنسيق الـ Tooltip */
+.tooltip {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+}
+
+/* تخصيص النصوص داخل الـ ResidentDialog */
+.dialog-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* تخصيص الـ TextField */
+.dialog-text-field, .dialog-date-picker {
+    -fx-padding: 8px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-pref-width: 250px;
+}
+
+/* تخصيص الأزرار */
+.dialog-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-effect: innershadow(gaussian, #aaaaaa, 10, 0, 0, 1);
+}
+
+/* تخصيص الـ CheckBoxes */
+.dialog-checkbox {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* تخصيص مظهر قائمة الغرف */
+.list-view .list-cell {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ddd;
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* تخصيص الحوار */
+.room-selection-dialog {
+    -fx-background-color: #fff;
+    -fx-padding: 15px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #ccc;
+    -fx-pref-width: 450px;
+}
+
+/* تخصيص أزرار حوار الغرف */
+.room-selection-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+}
+
+.room-selection-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* تخصيص الـ ListView */
+.room-selection-list-view {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 300px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ddd;
+}
+
+/* تخصيص النص داخل العناصر في ListView */
+.room-selection-list-view .list-cell {
+    -fx-padding: 12px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-border-radius: 5px;
+}

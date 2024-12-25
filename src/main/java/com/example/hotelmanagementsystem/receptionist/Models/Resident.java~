@@ -92,6 +92,19 @@ public class Resident {
 
 
     // added by sara for testing
+    public double calculateTotalCost(BoardingOptionStrategy boardingOptionStrategy) {
+        // Validate the strategy to avoid null pointer exceptions
+        if (boardingOptionStrategy == null) {
+            throw new IllegalArgumentException("Boarding option strategy cannot be null");
+        }
+
+        // Calculate costs
+        double boardingCost = boardingOptionStrategy.getCost(); // Get cost from strategy
+        double serviceCost = this.getTotalCost();               // Get service costs
+
+        // Sum up the costs
+        return boardingCost + serviceCost;
+    }
 
 
 }

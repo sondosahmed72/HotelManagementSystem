@@ -1,7 +1,7 @@
 package com.example.hotelmanagementsystem.receptionist.Strategy;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
-import com.example.hotelmanagementsystem.receptionist.Models.Room;
+import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ public class RoomDAO {
     private static final String DB_URL = DataBaseConnection.getDatabaseUrl();
 
     // Fetch all available rooms by type and boarding option
-    public static List<Room> getAvailableRooms(String type, String boardingOption) throws SQLException {
-        List<Room> rooms = new ArrayList<>();
+    public static List<Rooms> getAvailableRooms(String type, String boardingOption) throws SQLException {
+        List<Rooms> rooms = new ArrayList<>();
         String query = "SELECT * FROM Rooms WHERE status = 'Available'";
 
         if (!type.equals("All")) {
@@ -36,12 +36,13 @@ public class RoomDAO {
 
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                rooms.add(new Room(
+                rooms.add(new Rooms(
                         rs.getInt("roomID"),
                         rs.getString("type"),
                         rs.getDouble("price"),
                         rs.getString("status")
-                ));
+                ) {
+                });
             }
         }
         return rooms;

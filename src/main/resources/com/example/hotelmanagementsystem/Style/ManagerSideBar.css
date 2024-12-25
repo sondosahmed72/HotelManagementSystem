@@ -1,0 +1,27 @@
+/* Sidebar Styling */
+.sidebar-button {
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-alignment: center-left;
+    -fx-pref-width: 120px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #043B5C;
+    -fx-cursor: hand;
+}
+
+/* Sidebar Background with Border and Rounded Corners */
+.left {
+    -fx-background-color: #043B5C;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2;
+    -fx-border-radius: 15px 15px 0 0;  /* أعلى وأسفل الجانبين منحني */
+    -fx-padding: 10px;
+}
