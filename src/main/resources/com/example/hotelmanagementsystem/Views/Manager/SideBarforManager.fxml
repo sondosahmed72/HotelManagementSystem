@@ -34,7 +34,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="roomsButton"  styleClass="sidebar-button" text="Rooms">
+                <Button fx:id="roomsButton" onAction="#handleRoomsClick" styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                             <Image url="@../../icons/room.png" />
