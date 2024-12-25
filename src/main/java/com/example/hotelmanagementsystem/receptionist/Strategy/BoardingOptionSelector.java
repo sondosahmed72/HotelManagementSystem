@@ -1,10 +1,8 @@
 package com.example.hotelmanagementsystem.receptionist.Strategy;
 
-// Interface for Boarding Option
-public interface BoardingOption {
-
-
-    static BoardingOption fromString(String boardingOption) {
+// Utility class for strategy selection
+public class BoardingOptionSelector {
+    public static BoardingOptionStrategy selectStrategy(String boardingOption) {
         switch (boardingOption) {
             case "Full Board":
                 return new FullBoard();
@@ -16,7 +14,6 @@ public interface BoardingOption {
                 throw new IllegalArgumentException("Invalid boarding option: " + boardingOption);
         }
     }
-
-    String getName();
-    double getCost(); // Cost specific to the boarding option
 }
+
+
