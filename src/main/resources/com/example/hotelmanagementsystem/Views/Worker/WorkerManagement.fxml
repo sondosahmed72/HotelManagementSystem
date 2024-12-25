@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainContent2" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagementsystem.manager.Controllers.WorkerFormController">
+    <center>
+        <VBox spacing="20" BorderPane.alignment="CENTER">
+            <HBox alignment="TOP_LEFT" spacing="20">
+                <VBox prefWidth="300" spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add Worker" />
+                    <Label text="Worker Type:" />
+                    <ComboBox fx:id="workerTypeDropdown">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Ordinary Worker" />
+                                <String fx:value="Receptionist" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Label text="Name:" />
+                    <TextField fx:id="nameField" promptText="Enter worker's name" />
+                    <Label text="Contact Information:" />
+                    <TextField fx:id="contactField" promptText="Enter contact information" />
+                    <Label text="Salary" />
+                    <TextField fx:id="salaryField" promptText="Enter Salary" />
+                    <Label text="Job Role:" />
+                    <ComboBox fx:id="jobRoleDropdown">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Housekeeper" />
+                                <String fx:value="Maintenance Worker" />
+                                <String fx:value="Waitstaff" />
+                                <String fx:value="Chef" />
+                                <String fx:value="Security Guard" />
+                                <String fx:value="Event Coordinator" />
+                                <String fx:value="Spa Therapist" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Label fx:id="usernameLabel" text="Username:" visible="false" />
+                    <TextField fx:id="usernameField" promptText="Enter username" visible="false" />
+                    <Label fx:id="passwordLabel" text="Password:" visible="false" />
+                    <PasswordField fx:id="passwordField" promptText="Enter password" visible="false" />
+                    <Button fx:id="submitButton" onAction="#addWorker" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Submit" />
+                </VBox>
+                <TableView fx:id="workerTable" prefWidth="500">
+                    <columns>
+                        <TableColumn fx:id="colName" text="Name" />
+                        <TableColumn fx:id="colContact" text="Contact Information" />
+                        <TableColumn fx:id="colRole" text="Role" />
+                        <TableColumn fx:id="salaryColumn" text="Salary" />
+                        <TableColumn fx:id="jobTitleColumn" text="Job Title" />
+                    </columns>
+                </TableView>
+            </HBox>
+            <VBox fx:id="detailsPane" spacing="10" styleClass="card" visible="false">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Worker Details" />
+                <Label fx:id="detailsName" text="Name: " />
+                <Label fx:id="detailsContact" text="Contact Information: " />
+                <Label fx:id="detailsRole" text="Role: " />
+                <HBox spacing="10">
+                    <Button fx:id="editButton" onAction="#editWorker" styleClass="edit-button" text="Edit" />
+                    <Button fx:id="deleteButton" onAction="#deleteWorker" styleClass="delete-button" text="Delete" />
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

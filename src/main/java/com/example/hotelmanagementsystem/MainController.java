@@ -1,6 +1,7 @@
 package com.example.hotelmanagementsystem;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.fxml.FXMLLoader;
@@ -59,6 +60,21 @@ public class MainController {
             mainContent.getChildren().add(roomsContent);
         } catch (IOException e) {
             e.printStackTrace(); // Handle exception (log or show an alert)
+        }
+    }
+
+    @FXML
+    private void handleWorkersClick() {
+        try {
+            System.out.println("Loading WorkerManagement.fxml...");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Worker/WorkerManagement.fxml"));
+            Parent workerManagementPage = loader.load();
+            System.out.println("FXML loaded successfully.");
+            mainContent.getChildren().clear();
+            mainContent.getChildren().add(workerManagementPage); // Set the loaded content to the center of the BorderPane
+        } catch (IOException e) {
+            System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

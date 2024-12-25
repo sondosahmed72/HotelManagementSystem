@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagementsystem.manager.Controllers.WorkerDetailsController" stylesheets="@../../Style/popup-styles.css" styleClass="card">
+   <children>
+      <VBox layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" spacing="20" styleClass="popup-container">
+         <children>
+            <Label fx:id="detailsName" text="Name: " styleClass="details-label" />
+            <Label fx:id="detailsContact" text="Contact Info: " styleClass="details-label" />
+            <Label fx:id="detailsSalary" text="Salary: " styleClass="details-label" />
+            <Label fx:id="detailsJobTitle" text="Job Title: " styleClass="details-label" />
+            <Label fx:id="detailsUsername" text="Username: " styleClass="details-label" visible="false" />
+            <Label fx:id="detailsPassword" text="Password: " styleClass="details-label" visible="false" />
+            <HBox alignment="CENTER" spacing="10">
+               <Button fx:id="editButton" text="Edit" onAction="#editWorker" styleClass="edit-button" />
+               <Button fx:id="deleteButton" text="Delete" onAction="#deleteWorker" styleClass="delete-button" />
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

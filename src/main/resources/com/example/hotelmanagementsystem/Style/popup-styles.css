@@ -1,0 +1,52 @@
+.popup-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0, 0);
+}
+
+.details-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #043B5C;
+    -fx-font-weight: semi-bold;
+    -fx-padding: 5 0 5 10;
+
+}
+
+.card {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 20;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0, 0);
+}
+
+.edit-button {
+    -fx-background-color: #043B5C;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.edit-button:hover {
+    -fx-background-color: #035078;
+
+}
+
+.delete-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+}
+
+.delete-button:hover {
+    -fx-background-color: #d32f2f;
+}

@@ -8,7 +8,10 @@ public class WorkerPrototypeRegistry {
 
     public WorkerPrototypeRegistry() {
         Worker workerPrototypeInstance = new workerMember("Default Name", "1234567890");
+        Receptionist receptionistPrototypeInstance = new Receptionist("Default Receptionist", "1234567890", "defaultUser", "password123",0);
+
         registerWorker("worker", workerPrototypeInstance);
+        registerWorker("receptionist", receptionistPrototypeInstance);
     }
 
     public void registerWorker(String type, Worker worker){
