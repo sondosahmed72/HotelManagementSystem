@@ -70,7 +70,7 @@ public class MainController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Worker/WorkerManagement.fxml"));
             Parent workerManagementPage = loader.load();
             System.out.println("FXML loaded successfully.");
-
+            mainContent.getChildren().clear();
             mainContent.getChildren().add(workerManagementPage); // Set the loaded content to the center of the BorderPane
         } catch (IOException e) {
             System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
