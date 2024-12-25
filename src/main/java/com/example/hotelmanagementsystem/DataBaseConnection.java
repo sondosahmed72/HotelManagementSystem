@@ -18,8 +18,8 @@ public class DataBaseConnection {
     }
 
     // Method to get a connection to the database
-    public static Connection getConnection() {
-        if (connection == null) {
+    public static Connection getConnection() throws SQLException {
+        if (connection == null || connection.isClosed()) {
             try {
                 connection = DriverManager.getConnection(URL);
             } catch (SQLException e) {

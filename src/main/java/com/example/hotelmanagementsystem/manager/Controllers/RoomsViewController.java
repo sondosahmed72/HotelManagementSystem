@@ -34,6 +34,7 @@ public class RoomsViewController {
     private TableColumn<Rooms, String> statusColumn;
 
     public void initialize() {
+        loadRooms();
         roomIdColumn.setCellValueFactory(new PropertyValueFactory<>("roomID"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -45,13 +46,10 @@ public class RoomsViewController {
             System.out.println("No rooms available to display.");
         }
            System.out.println("Fetched rooms: " + rooms.size());
-// Print each room's details
+        // Print each room's details
         for (Rooms room : rooms) {
             System.out.println("Room ID: " + room.getRoomID() + ", Type: " + room.getType() + ", Price: " + room.getPrice() + ", Status: " + room.getStatus());
         }
-
-
-
     }
     @FXML
     private void handleAddRoom() {
@@ -60,7 +58,6 @@ public class RoomsViewController {
         result.ifPresent(newRoom -> {
             // Add the new room to the database
             addRoomToDatabase(newRoom);
-
             // After adding the room, update the available rooms display
             loadRooms(); // This method would refresh the displayed list of rooms in the UI
         });
