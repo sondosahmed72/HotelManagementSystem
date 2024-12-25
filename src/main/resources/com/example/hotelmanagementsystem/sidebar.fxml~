@@ -9,10 +9,10 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="575.0" prefWidth="883.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.MainController">
+<BorderPane prefHeight="575.0" prefWidth="883.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.receptionist.controller.MainController">
     <!-- Stylesheet -->
     <stylesheets>
-        <URL value="@../../Style/styles.css" />
+        <URL value="@styles.css" />
     </stylesheets>
 
     <!-- Sidebar Section (ثابت) -->
@@ -29,21 +29,21 @@
                 <Button onAction="#handleResidentClick" styleClass="sidebar-button" text="Resident">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/agent.png" />
+                            <Image url="@icons/agent.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button  onAction="#handleRoomClick"  styleClass="sidebar-button" text="Rooms">
+                <Button  onAction="#handleResidentClick"  styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/bed.png" />
+                            <Image url="@icons/bed.png" />
                         </ImageView>
                     </graphic>
                 </Button>
                 <Button styleClass="sidebar-button" text="Logout">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/logout.png" />
+                            <Image url="@icons/logout.png" />
                         </ImageView>
                     </graphic>
                 </Button>

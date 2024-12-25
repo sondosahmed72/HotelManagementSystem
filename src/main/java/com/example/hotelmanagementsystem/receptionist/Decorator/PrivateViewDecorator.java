@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Decorator;
 
 public class PrivateViewDecorator extends ServiceDecorator {
     public PrivateViewDecorator(Service decoratedService) {
