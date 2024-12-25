@@ -1,5 +1,4 @@
 package com.example.hotelmanagementsystem.manager.Controllers;
-
 import com.example.hotelmanagementsystem.manager.Classes.Workers.Receptionist;
 import com.example.hotelmanagementsystem.manager.Classes.Workers.Worker;
 import com.example.hotelmanagementsystem.manager.Classes.Workers.WorkerPrototypeRegistry;
