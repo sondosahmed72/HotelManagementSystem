@@ -8,7 +8,6 @@ import javafx.geometry.Pos;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import com.example.hotelmanagementsystem.receptionist.Strategy.BoardingOptionStrategy;
 
 public class ResidentDialog extends Dialog<Resident> {
 
@@ -204,8 +203,6 @@ public class ResidentDialog extends Dialog<Resident> {
         });
     }
 
-
-    
     // Method to show error messages
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -1,0 +1,77 @@
+package com.example.hotelmanagementsystem.receptionist.controller;
+
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.sql.*;
+
+public class RoomResptionistController {
+
+    @FXML
+    private TableView<Room> roomTableView;
+
+    @FXML
+    private TableColumn<Room, Integer> roomIDColumn;
+
+    @FXML
+    private TableColumn<Room, String> typeColumn;
+
+    @FXML
+    private TableColumn<Room, Double> priceColumn;
+
+    @FXML
+    private TableColumn<Room, String> statusColumn;
+
+    private ObservableList<Room> roomList = FXCollections.observableArrayList();
+
+    private static final String dbUrl = "jdbc:sqlite:db/data.db";
+
+    @FXML
+    public void initialize() {
+        // Setup columns
+        roomIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        roomTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        // Load rooms from database
+        loadRooms();
+    }
+
+    private void loadRooms() {
+        roomList.clear();
+        try (Connection connection = DriverManager.getConnection(dbUrl);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM Rooms")) {
+
+            while (resultSet.next()) {
+                Room room = new Room(
+                        resultSet.getInt("roomID"),
+                        resultSet.getString("type"),
+                        resultSet.getDouble("price"),
+                        resultSet.getString("status")
+                );
+                roomList.add(room);
+            }
+
+        } catch (SQLException e) {
+            showAlert(Alert.AlertType.ERROR, "Database Error", e.getMessage());
+        }
+
+        roomTableView.setItems(roomList);
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+}
+

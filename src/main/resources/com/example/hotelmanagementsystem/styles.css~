@@ -60,7 +60,7 @@ StackPane > Label {
 }
 
 /* تنسيق الـ TableView */
-#residentTableView, #roomTableView {
+#residentTableView {
     -fx-border-color: #2196F3;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
@@ -71,20 +71,20 @@ StackPane > Label {
     -fx-text-fill: #333333;
 }
 
-#residentTableView .column-header , #roomTableView .column-header {
+#residentTableView .column-header {
     -fx-background-color:#FAF9F6;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 
 /* تنسيق الأعمدة في الـ TableView */
-#residentTableView .table-cell , #roomTableView .table-cell {
+#residentTableView .table-cell {
     -fx-padding: 8px;
     -fx-alignment: CENTER_LEFT;
     -fx-font-size: 14px;
 }
 
-#residentTableView .table-row-cell:filled:hover, #roomTableView .table-row-cell:filled:hover {
+#residentTableView .table-row-cell:filled:hover {
     -fx-background-color: #E3F2FD;
 }
 

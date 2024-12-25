@@ -1,0 +1,4 @@
+package com.example.hotelmanagementsystem.receptionist.Strategy;
+
+public class BoardingOptionContext {
+}
