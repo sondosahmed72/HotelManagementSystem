@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DataBaseConnection {
 
     // Use the relative path to the db folder
-    private static final String URL = "jdbc:sqlite:E:/HotelManagementSystem/db/data.db";
+    private static final String URL = "jdbc:sqlite:C:\\Users\\sondo\\OneDrive - Faculty of Computer and Information Sciences (Ain Shams University)\\Desktop\\ProjectDesgin\\HotelManagementSystem\\db\\data.db";
 
     private static Connection connection;
 

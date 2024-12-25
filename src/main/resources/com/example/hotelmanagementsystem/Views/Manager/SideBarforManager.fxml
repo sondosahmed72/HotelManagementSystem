@@ -12,7 +12,7 @@
 <BorderPane prefHeight="575.0" prefWidth="883.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.MainController">
     <!-- Stylesheet -->
     <stylesheets>
-        <URL value="@styles.css" />
+        <URL value="@../../Style/ManagerSideBar.css" />
     </stylesheets>
 
     <!-- Sidebar Section (ثابت) -->
@@ -26,24 +26,45 @@
             <!-- Sidebar Menu -->
             <VBox spacing="10" style="-fx-padding: 20px; -fx-alignment: top-center;">
                 <!-- Button for Resident -->
-                <Button onAction="#handleResidentClick" styleClass="sidebar-button" text="Resident">
+                <Button  styleClass="sidebar-button" text="Worker">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/agent.png" />
+                            <Image url="@../../icons/business.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button styleClass="sidebar-button" text="Rooms">
+                <Button fx:id="roomsButton" onAction="#handleRoomsClick" styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/bed.png" />
+                            <Image url="@../../icons/room.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="sidebar-button" text="Report">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <Image url="@../../icons/report.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="sidebar-button" text="Residents ">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <Image url="@../../icons/family.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="sidebar-button" text="InCome">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <Image url="@../../icons/sales.png" />
                         </ImageView>
                     </graphic>
                 </Button>
                 <Button styleClass="sidebar-button" text="Logout">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@icons/logout.png" />
+                            <Image url="@../../icons/logout1.png" />
                         </ImageView>
                     </graphic>
                 </Button>
