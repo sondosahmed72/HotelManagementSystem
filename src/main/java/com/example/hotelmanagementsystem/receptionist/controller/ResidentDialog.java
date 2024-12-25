@@ -1,14 +1,13 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
+import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 import com.example.hotelmanagementsystem.receptionist.Models.Resident;
-import com.example.hotelmanagementsystem.receptionist.Models.Room;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.Pos;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import com.example.hotelmanagementsystem.receptionist.Strategy.BoardingOptionStrategy;
 
 public class ResidentDialog extends Dialog<Resident> {
 
@@ -162,23 +161,23 @@ public class ResidentDialog extends Dialog<Resident> {
         ResidentController controller = new ResidentController();
         controller.loadAvailableRooms(); // تحميل البيانات
 
-        Dialog<Room> roomDialog = new Dialog<>();
+        Dialog<Rooms> roomDialog = new Dialog<>();
         roomDialog.setTitle("Available Rooms");
 
-        ListView<Room> roomListView = new ListView<>();
+        ListView<Rooms> roomListView = new ListView<>();
         roomListView.setItems(controller.getRoomList()); // عرض الغرف المتاحة في الليست
 
         // تخصيص طريقة عرض العناصر في ListView
-        roomListView.setCellFactory(param -> new ListCell<Room>() {
+        roomListView.setCellFactory(param -> new ListCell<Rooms>() {
             @Override
-            protected void updateItem(Room item, boolean empty) {
+            protected void updateItem(Rooms item, boolean empty) {
                 super.updateItem(item, empty);
                 if (empty || item == null) {
                     setText(null);
                     setStyle("");
                 } else {
                     // عرض معلومات الغرفة بشكل مرتب
-                    setText("Room ID: " + item.getId() + " (" + item.getType()  + ")");
+                    setText("Room ID: " + item.getRoomID() + " (" + item.getType()  + ")");
                     setStyle("-fx-background-color: #f0f0f0; -fx-padding: 5px;"); // إضافة لون خلفية وتباعد للخلايا
                 }
             }
@@ -197,9 +196,9 @@ public class ResidentDialog extends Dialog<Resident> {
             return null;
         });
 
-        Optional<Room> result = roomDialog.showAndWait();
+        Optional<Rooms> result = roomDialog.showAndWait();
         result.ifPresent(selectedRoom -> {
-            selectedRoomID = String.valueOf(selectedRoom.getId());
+            selectedRoomID = String.valueOf(selectedRoom.getRoomID());
             selectedRoomLabel.setText("Room: " + selectedRoomID + " (" + selectedRoom.getType() +  ")");
         });
     }
