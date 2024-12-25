@@ -1,8 +1,6 @@
-package com.example.hotelmanagementsystem.manager;
+package com.example.hotelmanagementsystem.manager.Classes.Workers;
 
-import com.example.hotelmanagementsystem.manager.Classes.Workers.Worker;
-
-public class Reciptionist extends Worker implements Cloneable {
+public class Receptionist extends Worker implements Cloneable {
     private String username;
     private String password;
 
@@ -22,7 +20,7 @@ public class Reciptionist extends Worker implements Cloneable {
         this.password = password;
     }
 
-    public Reciptionist(String name, String phoneNumber, String password, String username, double salary) {
+    public Receptionist(String name, String phoneNumber, String password, String username, double salary) {
         setRole("Reciptionist");
         setJobTitle("Reciptionist");
         setName(name);
@@ -32,9 +30,9 @@ public class Reciptionist extends Worker implements Cloneable {
         this.username=username;
 
     }
-public Reciptionist Clone(){
+public Receptionist Clone(){
 try {
-    return (Reciptionist)super.clone();
+    return (Receptionist)super.clone();
 }catch (Exception ex) {
 throw  new AssertionError();
 }
