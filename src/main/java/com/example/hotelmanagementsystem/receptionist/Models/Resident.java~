@@ -1,4 +1,9 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Models;
+
+import com.example.hotelmanagementsystem.receptionist.Decorator.*;
+import com.example.hotelmanagementsystem.receptionist.Strategy.BoardingOptionStrategy;
+
+
 public class Resident {
     private int id;
     private String name;
@@ -83,4 +88,23 @@ public class Resident {
     public boolean isHasPrivateView() {
         return hasPrivateView;
     }
+
+
+
+    // added by sara for testing
+    public double calculateTotalCost(BoardingOptionStrategy boardingOptionStrategy) {
+        // Validate the strategy to avoid null pointer exceptions
+        if (boardingOptionStrategy == null) {
+            throw new IllegalArgumentException("Boarding option strategy cannot be null");
+        }
+
+        // Calculate costs
+        double boardingCost = boardingOptionStrategy.getCost(); // Get cost from strategy
+        double serviceCost = this.getTotalCost();               // Get service costs
+
+        // Sum up the costs
+        return boardingCost + serviceCost;
+    }
+
+
 }

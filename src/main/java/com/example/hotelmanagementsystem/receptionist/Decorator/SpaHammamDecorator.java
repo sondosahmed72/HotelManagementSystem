@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Decorator;
 
 public class SpaHammamDecorator extends ServiceDecorator {
     public SpaHammamDecorator(Service decoratedService) {

@@ -1,6 +1,9 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.controller;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
+import com.example.hotelmanagementsystem.receptionist.Models.Resident;
+import com.example.hotelmanagementsystem.receptionist.Models.Room;
+import com.example.hotelmanagementsystem.receptionist.Strategy.RoomDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.sql.*;
@@ -26,6 +29,9 @@ public class ResidentController {
     @FXML
     private TableColumn<Resident, String> boardingOptionColumn;
     @FXML
+    private TableColumn<Resident, Double> totalCostColumn;
+
+    @FXML
     public void initialize() {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -36,12 +42,13 @@ public class ResidentController {
         hasSpaHammamColumn.setCellValueFactory(new PropertyValueFactory<>("hasSpaHammam"));
         hasMassageColumn.setCellValueFactory(new PropertyValueFactory<>("hasMassage"));
         hasPrivateViewColumn.setCellValueFactory(new PropertyValueFactory<>("hasPrivateView"));
-
         boardingOptionColumn.setCellValueFactory(new PropertyValueFactory<>("boardingOption"));
-        residentTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        totalCostColumn.setCellValueFactory(new PropertyValueFactory<>("totalCost")); // ربط العمود
 
+        residentTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         loadResidents();
     }
+
 
     private void loadResidents() {
         residentList.clear();

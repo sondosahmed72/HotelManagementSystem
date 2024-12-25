@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.receptionist.ResidentController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.hotelmanagementsystem.receptionist.controller.ResidentController">
     <!-- Stylesheet -->
     <stylesheets>
         <URL value="@../../Style/styles.css" />
@@ -50,6 +50,8 @@
 
                             <!-- Add Boarding Option Column -->
                             <TableColumn fx:id="boardingOptionColumn" prefWidth="150" style="-fx-alignment: CENTER;" text="Boarding Option" />
+                            <TableColumn fx:id="totalCostColumn" prefWidth="150" style="-fx-alignment: CENTER;" text="Total Cost" />
+
                         </columns>
                     </TableView>
 

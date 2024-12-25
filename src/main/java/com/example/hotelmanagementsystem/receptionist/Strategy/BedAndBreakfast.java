@@ -1,7 +1,7 @@
-package com.example.hotelmanagementsystem.receptionist;
+package com.example.hotelmanagementsystem.receptionist.Strategy;
 
-// Bed and Breakfast Option
-public class BedAndBreakfast implements BoardingOption {
+// Bed and Breakfast Strategy
+public class BedAndBreakfast implements BoardingOptionStrategy {
     @Override
     public String getName() {
         return "Bed and Breakfast";
