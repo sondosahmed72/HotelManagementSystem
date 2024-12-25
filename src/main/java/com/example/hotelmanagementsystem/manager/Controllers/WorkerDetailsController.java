@@ -63,12 +63,16 @@ public class WorkerDetailsController {
 
     @FXML
     private Label passwordLabel;
+    @FXML
+    private Label detailsRole;
+
 
     private Worker selectedWorker;
     private final WorkerCRUD workerCRUD = new WorkerCRUD();
     private final ObservableList<Object> workersList = FXCollections.observableArrayList();
 
     public void setWorkerDetails(Worker worker) {
+        detailsRole.setText("Role : " + worker.getRole()); // Display role
         this.selectedWorker = worker;
         detailsName.setText("Name: " + worker.getName());
         detailsContact.setText("Contact Information: " + worker.getContact());
@@ -102,6 +106,7 @@ public class WorkerDetailsController {
 
         }
     }
+
     private WorkerFormController mainController;
 
     public void setMainController(WorkerFormController mainController) {
