@@ -55,6 +55,8 @@ public class WorkerFormController {
 
     @FXML
     private TableColumn<Worker, String> jobTitleColumn;
+    @FXML
+    private TableColumn<Worker, String> roleColumn;
 
     @FXML
     private Button submitButton;
@@ -84,7 +86,6 @@ public class WorkerFormController {
     private Label passwordLabel;
 
 
-
     @FXML
     private Label detailsUsername;
 
@@ -110,6 +111,7 @@ public class WorkerFormController {
         colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
         salaryColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
         jobTitleColumn.setCellValueFactory(new PropertyValueFactory<>("jobTitle"));
+        roleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));
         // Handle row selection
         workerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
