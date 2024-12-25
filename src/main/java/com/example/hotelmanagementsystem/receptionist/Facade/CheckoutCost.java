@@ -181,7 +181,8 @@ public class CheckoutCost {
                         "\nCheck-in Date: " + checkInDate +
                         "\nCheck-out Date: " + checkOutDate +
                         "\nTotal Cost: " + totalCost + " EGP" +  // عرض التكلفة الإجمالية هنا
-                        "\nServices Used: " + servicesUsed.toString());
+                        "\nServices Used: " + servicesUsed.toString()+
+                        "\nTotal Cost: " + totalCost + " EGP");
                 alert.showAndWait();
             }
         } catch (SQLException e) {
