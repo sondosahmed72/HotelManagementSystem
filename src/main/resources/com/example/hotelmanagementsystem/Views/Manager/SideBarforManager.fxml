@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="575.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagementsystem.receptionist.controller.MainController">
+<BorderPane prefHeight="575.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagementsystem.MainController">
     <!-- Stylesheet -->
     <stylesheets>
-        <URL value="@../../../../Style/ManagerSideBar.css" />
+        <URL value="@../../Style/ManagerSideBar.css" />
     </stylesheets>
 
     <!-- Sidebar Section (ثابت) -->

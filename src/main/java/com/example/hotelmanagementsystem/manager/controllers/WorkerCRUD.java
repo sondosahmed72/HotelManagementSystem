@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.manager.controllers;
+package com.example.hotelmanagementsystem.manager.Controllers;
 
 import com.example.hotelmanagementsystem.DataBaseConnection;
 import com.example.hotelmanagementsystem.manager.Classes.Workers.Worker;
