@@ -55,22 +55,6 @@ public class MainController {
             e.printStackTrace(); // Handle exception (log or show an alert)
         }
     }
-
-    @FXML
-    public void handleRoomClick(javafx.event.ActionEvent actionEvent) {
-        try {
-            // Load the RoomsManager.fxml file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/Room.fxml"));
-            Node roomsContent = loader.load();
-
-            // Clear the mainContent and set the new content
-            mainContent.getChildren().clear();
-            mainContent.getChildren().add(roomsContent);
-        } catch (IOException e) {
-            e.printStackTrace(); // Handle exception (log or show an alert)
-        }
-    }
-
     @FXML
     public void handleResidentsClick(javafx.event.ActionEvent actionEvent) {
         try {
@@ -90,17 +74,48 @@ public class MainController {
     @FXML
     private void handleWorkersClick() {
         try {
-            //System.out.println("Loading WorkerManagement.fxml...");
+            System.out.println("Loading WorkerManagement.fxml...");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Worker/WorkerManagement.fxml"));
             Parent workerManagementPage = loader.load();
-            //System.out.println("FXML loaded successfully.");
+            System.out.println("FXML loaded successfully.");
             mainContent.getChildren().clear();
             mainContent.getChildren().add(workerManagementPage); // Set the loaded content to the center of the BorderPane
         } catch (IOException e) {
-            // System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
+            System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
             e.printStackTrace();
         }
     }
+    @FXML
+    private void handleReportClick() {
+        try {
+            System.out.println("Loading WorkerManagement.fxml...");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Report/IncomeReport.fxml"));
+            Parent workerManagementPage = loader.load();
+            System.out.println("FXML loaded successfully.");
+            mainContent.getChildren().clear();
+            mainContent.getChildren().add(workerManagementPage); // Set the loaded content to the center of the BorderPane
+        } catch (IOException e) {
+            System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void handleRoomClick(javafx.event.ActionEvent actionEvent) {
+        try {
+            // Load the RoomsManager.fxml file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/Room.fxml"));
+            Node roomsContent = loader.load();
+
+            // Clear the mainContent and set the new content
+            mainContent.getChildren().clear();
+            mainContent.getChildren().add(roomsContent);
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle exception (log or show an alert)
+        }
+    }
+
+
 
     @FXML
     private void handleLogoutAction(javafx.event.ActionEvent event) {
