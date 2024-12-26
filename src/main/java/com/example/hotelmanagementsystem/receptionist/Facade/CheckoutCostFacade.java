@@ -9,24 +9,22 @@ public class CheckoutCostFacade {
         this.checkoutCost = new CheckoutCost();
     }
 
-    // حساب التكلفة لمقيم معين
+    //Calculate the cost for a specific resident
     public void calculateCost(int residentID) {
         checkoutCost.calculateAndUpdateCost(residentID);
     }
 
-    // عرض تفاصيل المقيم
+    // Show resident details
     public void showResidentDetails(int residentID) {
         checkoutCost.showResidentDetails(residentID);
     }
 
-    // واجهة مبسطة لتنفيذ العملية بالكامل: حساب التكلفة ثم عرض التفاصيل
+
     public void processAndDisplayResidentDetails(int residentID) {
         calculateCost(residentID);
         showResidentDetails(residentID);
     }
-    public void calculateCostForAllResidents() {
-        checkoutCost.calculateAndUpdateCostsForAllResidents();
-    }
+
 
 
 }
