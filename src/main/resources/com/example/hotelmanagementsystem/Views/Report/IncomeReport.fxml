@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.hotelmanagementsystem.manager.Controllers.IncomeReportController"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="20"
+      alignment="CENTER"
+      stylesheets="@../../Style/styles.css"
+      styleClass="report-container"
+>
+    <Label text="Generate Income Report" styleClass="header-label" />
+    <ComboBox fx:id="periodComboBox">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Weekly" />
+                <String fx:value="Monthly" />
+                <String fx:value="Annual" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Button text="Generate Report" onAction="#generateReport" styleClass="action-button" />
+    <TableView fx:id="reportTable" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colReportID" text="Report ID" />
+            <TableColumn fx:id="colPeriod" text="Period" />
+            <TableColumn fx:id="colTotalIncome" text="Total Income" />
+            <TableColumn fx:id="colCreationDateTime" text="Creation Date and Time" />
+        </columns>
+    </TableView>
+</VBox>

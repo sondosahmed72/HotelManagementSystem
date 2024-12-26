@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.login.proxy;
+package com.example.hotelmanagementsystem.login;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.*;
 
 
-public class LoginProxy implements SuitableRole {
+public class LoginProxy implements SuitableRole{
 
     private SuitableRole suitableRole;
 
@@ -44,8 +44,8 @@ public class LoginProxy implements SuitableRole {
             return "Manager"; // Return Manager role if credentials match
         }
         String role = null;
-        try (Connection connection = DriverManager.getConnection("jdbc:sqlite:C:/Users/lenovo ideapad/IdeaProjects/HotelManagementSystem/db/data.db")) {
-            String sql = "SELECT role FROM Workers WHERE username = ? AND password = ?";
+        try (Connection connection = DriverManager.getConnection("jdbc:sqlite:D:\\Users\\Lenovo\\Desktop\\Hello\\HotelManagementSystem\\db\\data.db")) {
+            String sql = "SELECT role FROM Workers WHERE WHERE username = ? AND password = ?";
             try (PreparedStatement stmt = connection.prepareStatement(sql)) {
                 stmt.setString(1, username.trim());
                 stmt.setString(2, password.trim());
