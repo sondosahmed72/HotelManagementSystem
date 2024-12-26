@@ -7,7 +7,7 @@ import java.sql.*;
 public class DataBaseConnection {
 
     // Use the relative path to the db folder
-    private static final String URL = "jdbc:sqlite:D:\\Users\\Lenovo\\Desktop\\Finallyyyyyyyy\\HotelManagementSystem\\db\\data.db";
+    private static final String URL = "jdbc:sqlite:C:/Users/lenovo ideapad/IdeaProjects/HotelManagementSystem/db/data.db";
     private static Connection connection;
 
     // Method to get the URL of the database

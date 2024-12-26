@@ -77,4 +77,18 @@ public class MainController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void handleReportClick() {
+        try {
+            System.out.println("Loading WorkerManagement.fxml...");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Report/IncomeReport.fxml"));
+            Parent workerManagementPage = loader.load();
+            System.out.println("FXML loaded successfully.");
+            mainContent.getChildren().clear();
+            mainContent.getChildren().add(workerManagementPage); // Set the loaded content to the center of the BorderPane
+        } catch (IOException e) {
+            System.err.println("Error loading WorkerManagement.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
