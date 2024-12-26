@@ -1,5 +1,6 @@
 package com.example.hotelmanagementsystem.receptionist.controller;
 
+import com.example.hotelmanagementsystem.DataBaseConnection;
 import com.example.hotelmanagementsystem.manager.Classes.Rooms.Rooms;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,7 +29,7 @@ public class RoomResptionistController {
 
     private ObservableList<Rooms> roomList = FXCollections.observableArrayList();
 
-    private static final String dbUrl = "jdbc:sqlite:E:/cyber/HotelManagementSystem/db/data.db";
+    private static final String dbUrl = DataBaseConnection.getDatabaseUrl();
 
     @FXML
     public void initialize() {

@@ -7,7 +7,6 @@ module com.example.hotelmanagementsystem {
     requires jdk.jdi;
     requires java.desktop;
     opens com.example.hotelmanagementsystem.Views.Manager to javafx.fxml;
-    opens com.example.hotelmanagementsystem.login to javafx.fxml;
     opens com.example.hotelmanagementsystem to javafx.fxml; // Ensure that the package is exported
     exports com.example.hotelmanagementsystem;
     exports com.example.hotelmanagementsystem.manager.Classes.Manager;
@@ -21,8 +20,6 @@ module com.example.hotelmanagementsystem {
     opens com.example.hotelmanagementsystem.manager.Classes.Rooms to javafx.fxml;
     exports com.example.hotelmanagementsystem.manager.Classes.Workers;
     opens com.example.hotelmanagementsystem.manager.Classes.Workers to javafx.fxml;
-    exports com.example.hotelmanagementsystem.manager.Classes.InCome;
-    opens com.example.hotelmanagementsystem.manager.Classes.InCome to javafx.fxml;
     exports com.example.hotelmanagementsystem.manager.Classes.Report;
     opens com.example.hotelmanagementsystem.manager.Classes.Report to javafx.fxml;
     opens com.example.hotelmanagementsystem.manager.Classes.Manager to javafx.fxml;

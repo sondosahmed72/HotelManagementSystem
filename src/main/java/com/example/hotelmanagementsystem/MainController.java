@@ -23,17 +23,14 @@ public class MainController {
     @FXML
     private Button logoutButton;
 
-    // هذه الدالة سيتم تنفيذها عند الضغط على زر "Resident"
     @FXML
     private void handleResidentClick() {
         try {
-            // تحميل صفحة الـ Residents
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/ResidentManagement.fxml"));
 
             BorderPane residentsPage = loader.load();
 
 
-            // تحديث محتوى الجزء المركزي
             mainContent.getChildren().setAll(residentsPage);
 
 
@@ -44,15 +41,13 @@ public class MainController {
     @FXML
     public void handleRoomsClick(javafx.event.ActionEvent actionEvent) {
         try {
-            // Load the RoomsManager.fxml file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Manager/RoomsManager.fxml"));
             Node roomsContent = loader.load();
 
-            // Clear the mainContent and set the new content
             mainContent.getChildren().clear();
             mainContent.getChildren().add(roomsContent);
         } catch (IOException e) {
-            e.printStackTrace(); // Handle exception (log or show an alert)
+            e.printStackTrace();
         }
     }
     @FXML
@@ -107,7 +102,6 @@ public class MainController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/Receptionist/Room.fxml"));
             Node roomsContent = loader.load();
 
-            // Clear the mainContent and set the new content
             mainContent.getChildren().clear();
             mainContent.getChildren().add(roomsContent);
         } catch (IOException e) {
@@ -119,12 +113,12 @@ public class MainController {
 
     @FXML
     private void handleLogoutAction(javafx.event.ActionEvent event) {
-        // أغلق النافذة الحالية
+
         Stage currentStage = (Stage) logoutButton.getScene().getWindow();
         currentStage.close();
 
         try {
-            // افتح نافذة تسجيل الدخول
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/hotelmanagementsystem/Views/login/login.fxml")); // عدل المسار
             Parent loginRoot = loader.load();
 

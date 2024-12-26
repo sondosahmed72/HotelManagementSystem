@@ -41,6 +41,7 @@ public class IncomeReportController {
         colCreationDateTime.setCellValueFactory(new PropertyValueFactory<>("formattedCreationDateTime"));
 loadReports();
         reportTable.setItems(reportsList);
+        reportTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
     @FXML

@@ -57,9 +57,9 @@
     <center>
         <StackPane fx:id="mainContent" prefHeight="619.0" prefWidth="645.0" style="-fx-padding: 20px;">
 
-            <ImageView fitHeight="150.0" fitWidth="150.0" layoutY="50" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="593.0" fitWidth="837.0">
                 <image>
-                    <Image url="@../../icons/rec.png" />
+                    <Image url="@../../icons/rec2.jpg" />
                 </image>
             </ImageView>
         </StackPane>

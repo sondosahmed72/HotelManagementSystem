@@ -67,7 +67,7 @@ public class ResidentController {
                         resultSet.getBoolean("hasSpaHammam"),
                         resultSet.getBoolean("hasMassage"),
                         resultSet.getBoolean("hasPrivateView"),
-                        resultSet.getString("boardingOption") // استرجاع البوردينج
+                        resultSet.getString("boardingOption")
                 );
                 residentList.add(resident);
             }
