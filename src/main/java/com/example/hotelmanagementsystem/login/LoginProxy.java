@@ -19,7 +19,7 @@ public class LoginProxy implements SuitableRole{
             return;
         }
 
-        if (userRole.equals("Receptionist")) {
+        if (userRole.equals("Reciptionist")) {
             suitableRole = new ReceptionistRole(loginStage);
         } else if (userRole.equals("Manager")) {
             suitableRole = new ManagerRole(loginStage);
