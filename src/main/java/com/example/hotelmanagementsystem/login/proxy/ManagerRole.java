@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.login;
+package com.example.hotelmanagementsystem.login.proxy;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ManagerRole implements SuitableRole{
+public class ManagerRole implements SuitableRole {
 
     private Stage loginStage;
     public ManagerRole(Stage loginStage) {
@@ -29,7 +29,7 @@ public class ManagerRole implements SuitableRole{
 
             // Close the login window after opening the Manager page
             if (loginStage != null) {
-                //loginStage.close();
+                loginStage.close();
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,6 +1,6 @@
-package com.example.hotelmanagementsystem;
+package com.example.hotelmanagementsystem.login.controller;
 
-import com.example.hotelmanagementsystem.login.LoginProxy;
+import com.example.hotelmanagementsystem.login.proxy.LoginProxy;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;

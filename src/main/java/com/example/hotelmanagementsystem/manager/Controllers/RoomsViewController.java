@@ -50,6 +50,7 @@ public class RoomsViewController {
         for (Rooms room : rooms) {
             System.out.println("Room ID: " + room.getRoomID() + ", Type: " + room.getType() + ", Price: " + room.getPrice() + ", Status: " + room.getStatus());
         }
+        roomsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
     @FXML
     private void handleAddRoom() {

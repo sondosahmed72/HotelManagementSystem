@@ -28,9 +28,7 @@ public class MainApp extends Application {
     }
 
     public static void main(String[] args) {
-        //DataBaseConnection.deleteManagers();
-        DataBaseConnection.addManager();
-        DataBaseConnection.showAllWorkers();
+
         launch(args);
     }
 }

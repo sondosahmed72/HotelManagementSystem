@@ -259,16 +259,14 @@ public class ResidentController {
     }
     @FXML
     private void handleCost() {
-        // الحصول على المقيم المحدد من الجدول
+
         Resident selectedResident = residentTableView.getSelectionModel().getSelectedItem();
 
-        // إذا لم يتم تحديد أي مقيم
         if (selectedResident == null) {
             showAlert(Alert.AlertType.WARNING, "No Selection", "Please select a resident to calculate the cost.");
             return;
         }
 
-        // إنشاء كائن من كلاس CheckoutCostFacade
         CheckoutCostFacade checkoutCostFacade = new CheckoutCostFacade();
 
         checkoutCostFacade.processAndDisplayResidentDetails(selectedResident.getId());

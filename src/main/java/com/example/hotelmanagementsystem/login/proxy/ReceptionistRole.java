@@ -1,4 +1,4 @@
-package com.example.hotelmanagementsystem.login;
+package com.example.hotelmanagementsystem.login.proxy;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,7 +27,7 @@ public class ReceptionistRole implements SuitableRole {
 
             // Close the login window after opening the receptionist page
             if (loginStage != null) {
-                //loginStage.close();
+                loginStage.close();
             }
         } catch (IOException e) {
             e.printStackTrace();

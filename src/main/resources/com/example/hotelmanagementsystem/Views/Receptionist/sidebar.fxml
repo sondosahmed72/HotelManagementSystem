@@ -29,25 +29,26 @@
                 <Button onAction="#handleResidentClick" styleClass="sidebar-button" text="Resident">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/agent.png" />
+                            <Image url="@../../icons/family.png" />
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button  onAction="#handleRoomsClick"  styleClass="sidebar-button" text="Rooms">
+                <Button  onAction="#handleRoomClick"  styleClass="sidebar-button" text="Rooms">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/bed.png" />
+                            <Image url="@../../icons/room.png" />
                         </ImageView>
                     </graphic>
                 </Button>
 
-                <Button styleClass="sidebar-button" text="Logout">
+                <Button onAction="#handleLogoutAction" fx:id="logoutButton" styleClass="sidebar-button" text="Logout">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
-                            <Image url="@../../icons/logout.png" />
+                            <Image url="@../../icons/logout1.png" />
                         </ImageView>
                     </graphic>
                 </Button>
+
             </VBox>
         </VBox>
     </left>
@@ -55,7 +56,13 @@
     <!-- Main Content Section (منطقة العرض الرئيسية) -->
     <center>
         <StackPane fx:id="mainContent" prefHeight="619.0" prefWidth="645.0" style="-fx-padding: 20px;">
-            <!-- سيتم هنا تحميل محتوى صفحة الـ Resident -->
+
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutY="50" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../icons/rec.png" />
+                </image>
+            </ImageView>
         </StackPane>
     </center>
 </BorderPane>
+

@@ -61,7 +61,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button styleClass="sidebar-button" text="Logout">
+                <Button onAction="#handleLogoutAction" fx:id="logoutButton" styleClass="sidebar-button" text="Logout">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                             <Image url="@../../icons/logout1.png" />
